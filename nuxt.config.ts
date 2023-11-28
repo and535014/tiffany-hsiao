@@ -1,11 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: [
-    "@nuxtjs/eslint-module",
-    "@nuxtjs/i18n",
-    "@nuxtjs/tailwindcss",
-  ],
+  modules: ["@nuxtjs/eslint-module", "@nuxtjs/i18n", "@nuxtjs/tailwindcss", "@nuxtjs/google-fonts"],
   i18n: {
     vueI18n: "./i18n.config.ts",
     locales: [
@@ -14,5 +10,11 @@ export default defineNuxtConfig({
     ],
     strategy: "prefix_except_default",
     defaultLocale: "zh",
+  },
+  googleFonts: {
+    families: {
+      "Noto+Sans+TC": [100, 300, 400, 500, 700, 900],
+      "Noto+Sans": [100, 300, 400, 500, 700, 900],
+    },
   },
 })
