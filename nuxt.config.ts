@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/eslint-module",
     "@nuxtjs/i18n",
+    "@nuxtjs/tailwindcss",
   ],
   i18n: {
     vueI18n: "./i18n.config.ts",
