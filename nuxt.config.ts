@@ -17,4 +17,10 @@ export default defineNuxtConfig({
       "Noto+Sans": [100, 300, 400, 500, 700, 900],
     },
   },
+  app: {
+    pageTransition: {
+      name: "fade",
+      mode: "out-in",
+    },
+  },
 })
