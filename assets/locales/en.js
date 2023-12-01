@@ -7,4 +7,7 @@ export default {
     projects: "Projects",
     contact: "Contact",
   },
+  button: {
+    resume: "Resume",
+  },
 }

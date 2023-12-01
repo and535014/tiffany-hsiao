@@ -1,5 +1,5 @@
 <script setup>
-import { IMAGES } from "~/constants/common"
+import { ICONS, IMAGES, LINKS } from "~/constants/common"
 
 const { t } = useI18n()
 const wrapperRef = ref(null)
@@ -17,6 +17,19 @@ const routes = [
     label: t("routes.contact"),
   },
 ]
+
+const openResumeFile = () => {
+  navigateTo(
+    {
+      path: LINKS.RESUME,
+    },
+    {
+      open: {
+        target: "_blank",
+      },
+    },
+  )
+}
 
 defineExpose({
   wrapperRef,
@@ -37,10 +50,17 @@ defineExpose({
         <div class="text-xl font-bold text-emerald-950">{{ $t("general.logo") }}</div>
       </NuxtLink>
 
-      <div class="flex items-center">
-        <template v-for="{ to, label } in routes" :key="to">
-          <NavLink :to="to" :label="label" />
-        </template>
+      <div class="flex items-center gap-3">
+        <div class="flex items-center">
+          <NavLink v-for="{ to, label } in routes" :key="to" :to="to" :label="label" />
+        </div>
+        <Button
+          :label="$t('button.resume')"
+          type="outlined"
+          rounded
+          size="large"
+          :trailing-icon="ICONS.FILE_DOWNLOAD_OUTLINE"
+          @click="openResumeFile" />
       </div>
     </div>
   </nav>
