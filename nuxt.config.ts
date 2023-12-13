@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/google-fonts",
     "nuxt-icon",
+    "nuxt-primevue",
   ],
   i18n: {
     vueI18n: "./i18n.config.ts",
@@ -28,5 +29,12 @@ export default defineNuxtConfig({
       name: "fade",
       mode: "out-in",
     },
+  },
+  primevue: {
+    options: {
+      unstyled: true,
+    },
+    importPT: { as: "Lara", from: "~/presets/lara/" },
+    cssLayerOrder: "tailwind-base, primevue, tailwind-utilities",
   },
 })

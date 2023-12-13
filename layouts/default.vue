@@ -21,7 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="pt-3 font-body text-slate-950">
+  <div class="text-surface-950 pt-3 font-body">
     <Navbar
       ref="navbarRef"
       :class="{

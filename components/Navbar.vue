@@ -46,8 +46,8 @@ defineExpose({
           :src="IMAGES.LOGO"
           width="40"
           height="40"
-          class="rounded-full hover:outline hover:outline-[3px] hover:outline-offset-0 hover:outline-emerald-800/40" />
-        <div class="text-xl font-bold text-emerald-950">{{ $t("general.logo") }}</div>
+          class="hover:outline-primary-800/40 rounded-full hover:outline hover:outline-[3px] hover:outline-offset-0" />
+        <div class="text-primary-950 text-xl font-bold">{{ $t("general.logo") }}</div>
       </NuxtLink>
 
       <div class="flex items-center gap-3">

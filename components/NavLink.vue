@@ -14,8 +14,8 @@ const isActive = computed(() => route.path === props.to)
       :class="[
         ' text-center text-xl font-bold tracking-wide',
         {
-          'text-slate-950': isActive,
-          'text-gray-400 hover:text-emerald-800/60': !isActive,
+          'text-surface-950': isActive,
+          'hover:text-primary-800/60 text-surface-400': !isActive,
         },
       ]">
       {{ label }}
@@ -23,7 +23,7 @@ const isActive = computed(() => route.path === props.to)
     <transition name="slide" mode="out-in">
       <div
         v-show="isActive"
-        class="absolute inset-x-4 bottom-1.5 h-1 rounded-full bg-emerald-800/60"></div>
+        class="bg-primary-800/60 absolute inset-x-4 bottom-1.5 h-1 rounded-full"></div>
     </transition>
   </NuxtLink>
 </template>
