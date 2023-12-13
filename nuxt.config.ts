@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "nuxt-primevue",
     "@nuxt/image",
+    "@pinia/nuxt",
   ],
   i18n: {
     vueI18n: "./i18n.config.ts",
@@ -38,5 +39,8 @@ export default defineNuxtConfig({
     },
     importPT: { as: "Lara", from: "~/presets/lara/" },
     cssLayerOrder: "tailwind-base, primevue, tailwind-utilities",
+  },
+  pinia: {
+    storesDirs: ["./stores/**"],
   },
 })
