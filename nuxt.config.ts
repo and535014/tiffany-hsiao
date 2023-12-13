@@ -1,6 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  css: ["primeicons/primeicons.css"],
   modules: [
     "@nuxtjs/eslint-module",
     "@nuxtjs/i18n",
