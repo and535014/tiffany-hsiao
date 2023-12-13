@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "nuxt-icon",
     "nuxt-primevue",
+    "@nuxt/image",
   ],
   i18n: {
     vueI18n: "./i18n.config.ts",
