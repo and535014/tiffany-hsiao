@@ -45,19 +45,19 @@ export default {
       {
         "text-white dark:text-surface-900":
           !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-        "bg-primary-500 dark:bg-primary-400":
+        "bg-primary-700 dark:bg-primary-400":
           !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
-        "border border-primary-500 dark:border-primary-400":
+        "border border-primary-700 dark:border-primary-400":
           !props.link && props.severity === null && !props.text && !props.outlined && !props.plain,
       },
       // Primary Text Button
       {
-        "text-primary-500 dark:text-primary-400":
+        "text-primary-700 dark:text-primary-400":
           props.text && props.severity === null && !props.plain,
       },
       // Primary Outlined Button
       {
-        "text-primary-500 border border-primary-500 hover:bg-primary-300/20":
+        "text-primary-700 border border-primary-700 hover:bg-primary-500/20":
           props.outlined && props.severity === null && !props.plain,
       },
 
@@ -201,7 +201,7 @@ export default {
       },
       // Text & Outlined Button
       {
-        "hover:bg-primary-300/20":
+        "hover:bg-primary-500/20":
           (props.text || props.outlined) && props.severity === null && !props.plain,
       },
 

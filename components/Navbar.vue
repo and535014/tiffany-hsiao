@@ -1,5 +1,6 @@
 <script setup>
-import { ICONS, IMAGES, LINKS } from "~/constants/common"
+import { PrimeIcons } from "primevue/api"
+import { IMAGES, LINKS } from "~/constants/common"
 
 const { t } = useI18n()
 const wrapperRef = ref(null)
@@ -56,10 +57,10 @@ defineExpose({
         </div>
         <Button
           :label="$t('button.resume')"
-          type="outlined"
+          outlined
           rounded
-          size="large"
-          :trailing-icon="ICONS.FILE_DOWNLOAD_OUTLINE"
+          :icon="PrimeIcons.EXTERNAL_LINK"
+          icon-pos="right"
           @click="openResumeFile" />
       </div>
     </div>
