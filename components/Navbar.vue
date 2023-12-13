@@ -1,23 +1,14 @@
 <script setup>
 import { PrimeIcons } from "primevue/api"
 import { IMAGES, LINKS } from "~/constants/common"
+import { ROUTES } from "~/constants/routes"
 
 const { t } = useI18n()
 const wrapperRef = ref(null)
-const routes = [
-  {
-    to: "/about",
-    label: t("routes.about"),
-  },
-  {
-    to: "/projects",
-    label: t("routes.projects"),
-  },
-  {
-    to: "/contact",
-    label: t("routes.contact"),
-  },
-]
+const routes = [ROUTES.ABOUT, ROUTES.PROJECTS, ROUTES.CONTACT].map(route => ({
+  to: `/${route}`,
+  label: t(`routes.${route}`),
+}))
 
 const openResumeFile = () => {
   navigateTo(
