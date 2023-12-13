@@ -31,5 +31,6 @@ onMounted(() => {
     <div ref="wrapperRef" :style="wrapperStyle" class="px-4 text-center">
       <slot />
     </div>
+    <Footer />
   </div>
 </template>
